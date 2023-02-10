@@ -1,4 +1,4 @@
-# User input
+# user input
 
 name = input('Ener Your name: ')
 age = input("Enter Your age: ")
