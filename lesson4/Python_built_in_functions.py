@@ -29,6 +29,12 @@ print(type(1) == str)
 print(type(len(['a',2,"c"])), 'Mindaugas', sep='-')
 
 
+word = "something"
+length = len(word)
+
+print(f"length of the word {word} is: {length}")
+
+
 #round()
 print(round(1.999))
 print(round(1.5555, 2))

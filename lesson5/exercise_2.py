@@ -1,4 +1,4 @@
-# Try creating structure like one here: link from an empty dictionary: my_dict = {}
+# Try creating structure an empty dictionary: my_dict = {}
 
 info = {
 	"name": "Albert",

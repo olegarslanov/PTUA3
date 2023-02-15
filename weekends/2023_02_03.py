@@ -1,4 +1,4 @@
-# a**n
+# calculation a**n
 
 a = int(input ("a="))
 n  = int(input ('n='))
