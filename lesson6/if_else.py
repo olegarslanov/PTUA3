@@ -1,3 +1,38 @@
+
+# Conditional Expressions:
+# <expr1> if <conditional_expr> else <expr2>
+
+
+if 'foo' in ['foo', 'bar', 'baz']:        
+    print('Outer condition is true')      
+
+    if 10 > 20:                           
+        print('Inner condition 1')        
+
+    print('Between inner conditions')    
+
+    if 10 < 20:                           
+        print('Inner condition 2')        
+
+    print('End of outer condition')       
+print('After outer condition')    
+
+
+# Terminal:
+# Outer condition is true
+# Between inner conditions
+# Inner condition 2
+# End of outer condition
+# After outer condition
+
+
+
+
+
+
+
+
+
 print (5>10)
 if 5>=10:
     print('YES')
@@ -56,7 +91,9 @@ if x > 10:
     print("but not above 20.")
 
 
+
 #pass
+# If we want to have an empty if statement for some reason we can simply do pass and nothing will happen.
 
 a = 50
 b = 80

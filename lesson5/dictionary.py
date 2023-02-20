@@ -1,4 +1,6 @@
 # dictionary
+# Dictionaries can be created using the flower braces or using the dict() function. You need to add the key-value pairs whenever you work with dictionaries.
+
 
 countries_and_capitals = {
     'Lithuania' : 'Vilnius',
