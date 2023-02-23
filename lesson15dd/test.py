@@ -1,1 +1,1 @@
-test(a)
+print("Hekko world")
