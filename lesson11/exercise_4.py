@@ -1,0 +1,1 @@
+Reimplement some previous solutions using the lambda function.
