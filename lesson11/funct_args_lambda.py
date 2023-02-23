@@ -17,20 +17,20 @@ check_arguments(101,102,name="")
 
 #Lambda funkcija (paprasta primityvi funkcija)
 
+#1
 multiplication = lambda x,y : x*y
-print(multiplication())
+print(multiplication(3,4))
 
 
+#2
+# from typing import Callable
 
+# def my_func(n: int) -> Callable:
+#     return lambda a,b,c: (a+b+c)*n
 
-from typing import Callable
+# my_doubler= my_func(10)
 
-def my_func(n: int) -> Callable:
-    return lambda a,b,c: (a+b+c)*n
-
-my_doubler= my_func(10)
-
-print(my_doubler(10,5,3))
+# print(my_doubler(10,5,3))
 
 
 

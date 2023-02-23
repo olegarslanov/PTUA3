@@ -8,10 +8,11 @@ print_smth()
 
 
 2
-def sum (num1,num2)->int:
+def sum (num1:int,num2:int)->int:
   sum=num1+num2
   print(sum)
   return sum
+ 
 
 sum(1,2)
 
