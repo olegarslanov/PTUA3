@@ -1,2 +1,0 @@
-spam = "Hello"
-spam
