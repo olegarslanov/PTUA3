@@ -1,3 +1,1 @@
-a = len(max(1, 20))
-
-print(a)
+print(5 // 2)

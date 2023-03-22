@@ -44,6 +44,7 @@ class Cash(Money):
     def convert_to_currency(
         self, target_currency: str, conversion_rate: Dict[str, float]
     ) -> None:
+        self.value = self.denomination * (self.value // self.denomination)
         self.value = round(
             self.value
             * conversion_rate[self.currency]
@@ -51,15 +52,31 @@ class Cash(Money):
             2,
         )
         self.currency = target_currency
-        for _ in range(int(self.value / self.denomination)):
-            self.value -= self.denomination
+
+
+class Card(Money):
+    def __init__(self, currency: str, value: float, credit_limit: int):
+        super().__init__(currency, value)
+        self.credit_limit = credit_limit
+
+    def convert_to_currency(
+        self, target_currency: str, conversion_rate: Dict[str, float]
+    ) -> None:
+        self.value = round(
+            min(self.value, self.credit_limit)
+            * conversion_rate[self.currency]
+            * conversion_rate[target_currency],
+            2,
+        )
+        self.currency = target_currency
 
 
 conversion_rate = {"euro": 1.0, "dollar": 0.8, "rub": 60.0}
 
+cash = Cash("dollar", 102, 5)
+cash.convert_to_currency("rub", conversion_rate)
+print(cash.get_currency(), cash.get_value())
 
-cash1 = Cash("dollar", 100, 1)
-cash1.convert_to_currency("euro", conversion_rate)
-
-
-print(cash1.get_currency(), cash1.get_value())
+card = Card("dollar", 102, 1000)
+card.convert_to_currency("rub", conversion_rate)
+print(card.get_currency(), card.get_value())
