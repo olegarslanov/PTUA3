@@ -1,6 +1,5 @@
 __pycache__
 .venv
 data.log
-estimate.log
 .mypy_cache
 .vscode

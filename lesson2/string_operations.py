@@ -3,7 +3,7 @@
 
 letter = "a"
 name = "Code Academy"
-sentence = 'I must working hard !'
+sentence = "I must working hard !"
 
 # String operations
 
@@ -53,17 +53,17 @@ sentence = 'I must working hard !'
 # upper()	Converts a string into upper case
 # zfill()	Fills the string with a specified number of 0 values at the beginning
 
-name= "Code Academy"
+name = "Code Academy"
 print(name[:-2])
-print(name[5:12:2])                   # Aaey
-print(name[5::2])                     # Aaey
-print(name[::-1])                     # ymedacA edoC
-print(name.split())                   # ['Code', 'Academy']
-print(name.upper())                   # CODE ACADEMY
-print(name.replace("Code","Music"))
+print(name[5:12:2])  # Aaey
+print(name[5::2])  # Aaey
+print(name[::-1])  # ymedacA edoC
+print(name.split())  # ['Code', 'Academy']
+print(name.upper())  # CODE ACADEMY
+print(name.replace("Code", "Music"))
 
 
-#Combining of string
+# Combining of string
 
 greeting = "Hello, my name is"
 name = "Tom"
@@ -73,3 +73,17 @@ print(completed_greeting)
 
 completed_greeting = greeting + " " + name
 print(completed_greeting)
+
+
+# Kaip skaiciu paversti i lista !!!
+
+# padariau is skaiciaus atskiru skaiciu lista
+string = "525"  # only string object iterable, integer is not!
+numbers_list = []
+for number in string:
+    numbers_list.append(int(number))
+
+# tiesiog susumuoju listo elementus tarpusavyje
+sum_number = sum(numbers_list)
+
+print(sum_number)

@@ -1,6 +1,3 @@
+a = len(max(1, 20))
 
-mama papa   
-
-
-
-
+print(a)

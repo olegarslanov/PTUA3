@@ -12,8 +12,7 @@
 # DUP: Duplicate (not double) the top value on the stack.
 # POP: Pop the last value from the stack and discard it.
 # PSH: Performed whenever a number appears as an instruction. Push the number to the stack.
-# Any other instruction (for example, a letter) should result in the value 
-# "Invalid instruction: [instruction]"
+# Any other instruction (for example, a letter) should result in the value "Invalid instruction: [instruction]"
 
 # Examples:
 
@@ -26,3 +25,10 @@
 # "6 5 5 7 * - /" ➞ 5
 
 # "x y +" ➞ Invalid instruction: x
+
+
+
+
+
+
+

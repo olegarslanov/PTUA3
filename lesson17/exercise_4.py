@@ -35,15 +35,16 @@ class Country:
     def is_big(self):
         return self.population > 20000000 or self.area > 3000000
 
-    def compare_pd(self, other):
-        if self.population / self.area > other.population / other.area:
-            return(f"{self.country_name} has a larger population density than {other.country_name}")
+    def compare_pd(self, others):
+        if self.population / self.area > others.population / others.area:
+            return(f"{self.country_name} has a larger population density than {others.country_name}")
         else:
-           return(f"{other.country_name} has a larger population density than {self.country_name}")
+           return(f"{others.country_name} has a larger population density than {self.country_name}")
 
 
 australia = Country("Australia", 23545500, 7692024)
 andorra = Country("Andorra", 76098, 468)
+
 
 print(australia.is_big())
 print(andorra.is_big())

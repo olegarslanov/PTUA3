@@ -5,7 +5,6 @@
 # inheritance example
 
 
-
 class Building:
     def __init__(self, constr_type: str, use_type: str, life_cycle: int) -> None:
         self.constr_type = constr_type
@@ -21,13 +20,14 @@ class Building:
     def get_life_cycle(self) -> None:
         print(f'My building life cycle: {self.life_cycle}')
 
+    def get_all_parameters (self):
+        print(f'{self.constr_type} + {self.use_type} + {self.life_cycle}')
+
 
 class Interior(Building):  
-    def __init__(self, luxury_level:int, involvement_level:int, comunications:str) -> None:
+    def __init__(self, luxury_level:int) -> None:
         self.luxury_level = luxury_level
-        self.involvement_level = involvement_level
-        self.comunications = comunications
-
+   
     def get_luxury_level(self) -> None:
         print(f'My building interrior : {self.luxury_level}')
 
@@ -43,14 +43,14 @@ class Exterior(Building):
 
 
 
-buil_individ = Building("Reatining walls", "Individual", 80)
-build_admin = Building("Frame", "Public", 100)
+build_individ = Building("Reatining walls", "Individual", 80)
 
+
+build_admin = Building("Frame", "Public", 100)
 build_admin.get_constr_type()
 
 
 interior = Interior("average", "0.8", "without gas")
-
 interior.get_luxury_level()
 
 
