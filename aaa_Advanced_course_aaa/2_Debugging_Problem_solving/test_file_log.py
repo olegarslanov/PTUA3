@@ -1,9 +1,12 @@
-import logging
-import logging.config
+import logging, logging.config
 
-logging.config.fileConfig(fname="logging.conf", disable_existing_loggers=False)
-
-# Get the logger specified in the file
+# set up logging
+logging.config.fileConfig("logging.conf")
 logger = logging.getLogger("sLogger")
 
-logger.debug("This is a debug message")
+# log something
+logger.debug("debug message")
+logger.info("info message")
+logger.warning("warn message")
+logger.error("error message")
+logger.critical("critical message")
