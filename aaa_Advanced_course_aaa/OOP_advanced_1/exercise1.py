@@ -29,7 +29,6 @@ class Shape:
 
 class Rectangle(Shape):
     def __init__(self, width: float, height: float) -> None:
-        # super().__init__(name=self.name, sides=self.sides)
         self.width = width
         self.height = height
 

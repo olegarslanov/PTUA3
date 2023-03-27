@@ -1,1 +1,4 @@
-print(5 // 2)
+stra = "diadia"
+
+a = input()
+print(a in stra)

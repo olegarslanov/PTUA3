@@ -7,39 +7,43 @@
 # "Cat says Meow!" respectively.
 
 
-# abstract
-
 from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
-    def __init__(self, name: str) -> None:
+    def __init__(self, name):
         self.name = name
 
     @abstractmethod
-    def speak(self) -> str:
+    def speak(self):
         pass
 
-    def get_name(self) -> str:
+    def get_name(self):
         return self.name
 
 
 class Dog(Animal):
-    def speak(self) -> str:
+    def speak(self):
         return "Dog says Woof!"
 
 
 class Cat(Animal):
-    def speak(self) -> str:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
         return "Cat says Meow!"
 
 
-dog = Dog("Vaska")
-print(dog.get_name())
-print(dog.speak())
-
-cat = Cat("Murka")
+cat = Cat("Zasur")
 print(cat.speak())
+print(cat.name)
+print(cat.get_name())
+
+dog = Dog("Zas")
+print(dog.speak())
+print(dog.name)
+print(dog.get_name())
 
 
 # inheritance

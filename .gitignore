@@ -3,3 +3,4 @@ __pycache__
 data.log
 .mypy_cache
 .vscode
+.env
