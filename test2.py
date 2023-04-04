@@ -1,12 +1,11 @@
-m = ["до", "ре", "ми", "фа", "соль", "ля", "си"]
+class Calc:
+    MY_NUMBER = 2
 
-a, b, c = map(int, input().split())
+    def __init__(self, nr: int) -> None:
+        self.MY_NUMBER += nr
 
-result = ""
-for i, n in enumerate([a, b, c]):
-    nota = m[n - 1]
-    result += "#" + nota if nota in (m[0], m[3]) else nota
-    if i < 2:
-        result += " "
 
-print(result)
+cal_one = Calc(nr=3)
+
+print(cal_one.MY_NUMBER)
+print(cal_one())

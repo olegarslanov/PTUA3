@@ -201,10 +201,10 @@
 # print(table.check_aviability("Luiz", "Fernandez", now_hour))
 
 
-# 5 Papildziau, kad patikrintu neturinciam rezervacijos ar tam laikui laisvas stalas
+# 5 Papildziau, kad ...
 # please enter number of guests
 # check, if guest <= number of seat and time != reservation time got message to assign table
-# if not got message sorry we dont have  free tables
+# if not got message sorry we dont have free tables
 
 from typing import List
 import datetime
@@ -213,10 +213,23 @@ now_hour = (lambda t: t.strftime("%H"))(datetime.datetime.now())
 
 
 class Cafeteria:
-    # tables
-    single_table = [1]
-    double_table = [2, 3]
-    family_table = [4, 5, 6]
+    tables = {
+        "single_table": {
+            "nr1": {"reserved": False},
+            "nr2": {
+                "reserved": True,
+                "name": "customer_name",
+                "surname": "customer_surname",
+                "reservation_hour": "some_future_time",
+            },
+        },
+        "double_table": {"nr3": {"reserved": False}, "nr4": {"reserved": False}},
+        "family_table": {
+            "nr5": {"reserved": False},
+            "nr6": {"reserved": False},
+            "nr7": {"reserved": False},
+        },
+    }
     # meniu
 
 
@@ -263,8 +276,8 @@ class Person:
         self.surname = surname
 
 
-single_table = Table(1)
-double_table = Table(2)
+# single_table = Table(1)
+# double_table = Table(2)
 family_table = Table(5)
 
 family_table.create_reservation("Oleg", "Arslanov", 18)
