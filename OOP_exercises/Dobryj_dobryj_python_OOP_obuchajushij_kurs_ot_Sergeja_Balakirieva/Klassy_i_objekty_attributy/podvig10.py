@@ -15,4 +15,5 @@ class Person:
 
 
 p1 = Person()
+print(p1.job)
 print(getattr(Person, p1.job, False))

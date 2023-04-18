@@ -28,3 +28,22 @@ n: Numbers = Numbers (6)
 # while number < n:
 #     print(number)
 #     number += 1
+
+
+
+# Lambda syntax:
+lambda (<parameter_list> : <expression>)(<"paduodam kazka">)
+
+# idedam parametra x, daro su (x, x**2, x**3) ("paduodam skaiciukus" (2))
+# print((lambda x: (x, x**2, x**3))(2))
+
+
+primes numbers:
+
+n= 5
+i= 1
+
+while i in n:
+    if i%2 == 0 or i%3 ==0:
+        print(i, end = "")
+    i+=1
