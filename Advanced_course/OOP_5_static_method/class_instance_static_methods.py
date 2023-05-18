@@ -1,14 +1,15 @@
-pylint: disable - all
+# pylint: disable - all
+
+# 1
+# class Circle:
+# def print_my_name():
+#     print("Circle")
+
+# def print_my_name(self):
+#     print(self.name)
 
 
-class Circle:
-    def print_my_name():
-        print("Circle")
-
-    def print_my_name(self):
-        print(self.name)
-
-
+# 2
 class Car:
     def __init__(self, make: str, model: str, year: int) -> None:
         self.make = make
@@ -24,3 +25,11 @@ class Car:
 
     def drive(self, miles: int) -> None:
         self.update_odometer(self.odometer_reading + miles)
+
+
+car = Car("Honda", "Civic", 2000)
+
+car.update_odometer(10000)
+car.drive(2000)
+
+print(car.odometer_reading)

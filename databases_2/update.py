@@ -1,0 +1,19 @@
+from main import Project
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
+engine = create_engine("sqlite:///projektai.db")
+Session = sessionmaker(bind=engine)
+session = Session()
+""":type: sqlalchemy.orm.Session"""
+
+
+# Kaip pakeisti kaina lentelėje (crUd):
+# project1 = session.query(Project).get(1)
+# project1.price = 22000
+# session.commit()
+
+# Kaip pakeisti pavadinima lentelėje (crUd):
+project1 = session.query(Project).filter_by(name="New Project 2").one()
+project1.name = "Not so New Project 2"
+session.commit()

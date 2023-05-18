@@ -1,3 +1,22 @@
+# Kad pasidalinti failai revizijai su kolega
+
+# 1. Web browser github.com sukuriu repository -> new, suteikiu pavadinima: <repozitorijos pavadinimas>
+# 2. Atidarau Git Bash:
+# a) nukeliauju i direktorija kurioje randasi revizuojami failai
+# b) ivedu : git clone <http adresas>    (nukopijuoju revizuojamu failu <http adresas> is github.com)
+# c) ivedu : <kodo tekstas>    (kopijuoti teksta is pastraipos: "…or create a new repository on the command line")
+# d) ivedu : git checkout -b <sakos pavadinimas> (cia sukuriu brancho nauja saka)
+# e) ivedu : code . (atsidarys VS code programa)
+# 3. Atidarau VS code:
+# a) atidarau folder su revizuojamais failais
+# b) ivedu : git add .
+# c) ivedu : git commit -m "2023_05_16"
+# d) ivedu : git push
+# 4. Nauja projekto atsaka sukurta
+# 5. Web browser github.com ieinu i repozitoriju spaudziu "Settings"-> "Collaborators" -> "Add people" ... dadedu kas gales koreguoti repozitoriju
+# 6. spaudziu: pull request ir
+
+
 # Kad sukurti nauja branch reikia 'Terminalo' lange ivesti:
 # "git checkout -b <branch_name>"
 
@@ -33,7 +52,7 @@
 
 
 # Kad isnaikinti branch reikia:
-# "git branch -delete <branch name>" - naikinu is local 
+# "git branch -delete <branch name>" - naikinu is local
 # "git branch -delete <branch name> -a" - naikinu branch ir is github serverio
 
 
@@ -42,4 +61,4 @@
 # "ls" - galiu perziureti kokie failai yra direktorijoje
 # ":q" - spaudziu kad iseiti is git log
 # "code . " - paleisti programa Visual Stiudio Code
-# "git log" - 
+# "git log" -

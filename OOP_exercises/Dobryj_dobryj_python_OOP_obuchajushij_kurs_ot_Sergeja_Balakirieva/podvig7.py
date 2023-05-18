@@ -2,21 +2,23 @@ import sys
 
 
 class StreamData:
-    def __init__(self):
-        self.FIELDS = None
-        self.lst_in = None
-
     def create(self, fields, lst_values):
-        self.FIELDS = fields
-        self.lst_in = lst_values
-        return len(self.FIELDS) == len(self.lst_in)
+        if len(fields) != len(lst_values):
+            return False
+
+        for i, key in enumerate(fields):
+            setattr(self, key, lst_values[i])
+
+        return True
 
 
 class StreamReader:
     FIELDS = ("id", "title", "pages")
 
     def readlines(self):
-        lst_in = list(map(str.strip, sys.stdin.readlines()))
+        lst_in = list(
+            map(str.strip, sys.stdin.readlines())
+        )  # schityvanije spiska strok iz vhodnogo potoka
         sd = StreamData()
         res = sd.create(self.FIELDS, lst_in)
         return sd, res

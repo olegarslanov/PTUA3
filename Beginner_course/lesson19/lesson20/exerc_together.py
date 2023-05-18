@@ -64,6 +64,8 @@ my_plane = Airbus("340")
 print(my_plane.get_plane_name())
 print(f"Your plane speed is {my_plane.get_max_speed()} km/h")
 
+print(my_plane.AIRBUS_TYPE_SPEED_COEF.get(my_plane.model_type) * my_plane.BASE_SPEED)
+
 
 # only one class
 
