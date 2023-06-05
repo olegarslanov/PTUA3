@@ -1,4 +1,4 @@
-
+# Pipenv /////
 
 # Pipenv yra trečiosios šalies paketas, todėl pirmiausia jį reikia įdiegti:
 # pip install pipenv
@@ -25,13 +25,32 @@
 # pipenv uninstall <paketo pavadinimas>
 
 
+# Venv ////
+
+# Sukurti virtualia aplinka:
+# python -m venv .venv
+
+# Aktyvuoti virt. aplinka:
+# source .venv/Scripts/actvate
+
+# Kad istaliuoti paketus/bibliotekas:
+# pip install <paketo pavadinimas>
+
+# Deaktyvuoti virt. a.:
+# deactivate
+
+# Perziureti kokie paketai instaliuoti:
+# pip freeze
+
+# Sugeneruoti automatiskai requirements.txt: (nurodo siame faile kokiu bibliotekos versiju reikia, kad korektiskai veiktu programa)
+# pip freeze > requirements.txt
+
+# Greitai instaliuoti virt. aplink. tas pacias biblioteku versijas:
+# pip install -r requirement.txt
+
+# Greitai deinstaliuoti virt. aplink. visas bibliotekas:
+# pip uninstall -r requirement.txt -y
 
 
-
-
-import numpy as np
-import pandas as pd
-
-
-print(np.sin(1))
-print(pd.value_counts("humpy as eee"))
+# Kaip suprasti kad esu virt. aplinkoje:
+# terminalo eiluteje turi buti uzrasas ".venv"

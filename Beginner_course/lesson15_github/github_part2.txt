@@ -1,0 +1,78 @@
+# Github reikalingas bendradarbiavimui ir versiju kontrolei ir t.t.and
+
+# Kad sukurti nauja repozitorija githube ////
+# a) Web browser github.com sukuriu repository -> new, suteikiu pavadinima: <repozitorijos pavadinimas>
+# b) Atidarau Git Bash (greiciausiai galima ir is vscode terminalo):
+# c) nukeliauju i direktorija kurioje randasi revizuojami failai
+# d) idedu failu i direktorija
+# e) ivedu : <kodo tekstas>    (kopijuoti teksta is pastraipos: "…or create a new repository on the command line")
+#   echo "# 123" >> README.md
+#   git init
+#   git add README.md
+#   git commit -m "first commit"
+#   git branch -M main
+#   git remote add origin <http adresas>
+#   git push -u origin main
+# f) tada git add . + git commit -m <komentaras> + git push
+
+# Kad sukurti nauja branch atsaka ////
+# a) ivedu : git checkout -b <sakos pavadinimas> (cia sukuriu brancho nauja saka)
+# b) atidarau folder su revizuojamais failais
+# c) ivedu :  git push --set-upstream origin staging
+
+# Kad dadeti bendradarbi ////
+# Web browser github.com ieinu i repozitoriju spaudziu "Settings"-> "Collaborators" -> "Add people" ... reikia iskart invite t.y. paspausti mygtuka "Add people"
+
+# Pull request ... Jei noriu kad githube perziuretu kolegos(cia dadeti i callaborators) patvirtintu ar parasytu kas blogai:
+# a) spaudziu: pull request -> new pull request ... rasau komentara ir siunciu perziurai
+# b) kolegos pamato ir atraso kas blogai kas gerai ... kartojam iki gerai
+# c) tada gali merge branches i viena main
+
+# Kai siuncia uzklausa buti callaborator /////
+# a) reikia klonuoti depozitorju: git clone <http adresas>    (nukopijuoju revizuojamu failu <http adresas> is github.com ...naudojama nusikopijuoti (klonuoti) esamą Git repozitoriją į vietinę saugyklą)
+# b) dadedu failus, taisau ir t.t.
+# c) git add . + git commit -m <komentaras> + git push
+
+# Pull request pagrindiniai etapai: (reikalingas bendradarbiauti programuotojams)
+# pull request
+# kolegos review
+# merge code
+# branch remove
+# update local
+
+# Ivairios komandos ///
+
+# Kad pereiti i kita branch ivedam:
+# "git checkout <branch_name>"
+
+# Norint padaryti merge reikia ivesti is staging branch:
+# "git merge <branch_name>" (cia main branch)
+
+# Kad paziureti kiek yra branch ivesti:
+# "git branch"
+
+# Kad persiusti i github pakeitimus:
+# "git add ." - paruosiau visus pakeitimus is branch
+# "git commit -m <'komentaras'>" - pridedu komentara kas per pakeitimai
+# "git status" - pateikia info kas bus keiciama serverio atmintyje
+# "git push" - perkeliu visus pakeitimus i github serveri
+
+# Kad atsiusti is github pakeitimus i kompa:
+# "git status" - pateikia info kas bus atsiusta
+# "git pull" - atsiunciu visus pakeitimus i mano kompa
+
+# Kad klonuoti failus is github i local reikia:
+# github.com kopijuoju <http ...> nuoroda
+# tada atidarau terminale (ar git bash) direktorija, kurioje noriu kad butu klonuoti failai
+# terminalo eiluteje irasau "git clone <http ...>"
+
+# Kad isnaikinti branch:
+# "git branch -delete <branch name>" - naikinu is local
+# "git branch -delete <branch name> -a" - naikinu branch ir is github serverio
+
+# Kitos komandos:
+# "mkdir <folder name>" - sukurti nauja byla
+# "ls" - galiu perziureti kokie failai yra direktorijoje
+# ":q" - spaudziu kad iseiti is git log
+# "code . " - paleisti programa Visual Stiudio Code
+# "git log" -

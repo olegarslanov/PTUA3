@@ -70,6 +70,10 @@ while True:
         deleted_count = db.delete_document(document_id)
         print(f"Deleted {deleted_count} documents")
 
+    # def delete_document(self, document_id) -> bool:
+    #     result = self.collection.delete_one({"_id": document_id})
+    #     return result.deleted_count > 0
+
     if choice == 5:
         # Delete document Operation
         document_id = {"name": "John Doe"}

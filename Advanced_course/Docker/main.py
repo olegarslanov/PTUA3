@@ -1,4 +1,11 @@
-### Работа с изображениями
+# Docker ////
+
+# Pagrindinis skirtumas tarp konteinerio ir vaizdo yra tai, kad vaizdas yra pasyvus, nevykdomas failų rinkinys,
+# o konteineris yra aktyvus procesas, veikiantis pagal vaizdo aprašymą. 
+# Galima manyti, kad vaizdas yra programos arba paslaugos šablonas, o konteineris yra paleistas atvejis,
+# naudojantis šiuo šablonu. 
+
+### Работа с изображениями ////
 
 # Откройте терминал или командную строку и введите следующую команду, чтобы загрузить образ Docker:
 docker pull <image_name>
@@ -14,7 +21,7 @@ docker image ls
 docker rmi <image_id>
 
 
-### Работа с контейнерами
+### Работа с контейнерами ////
 
 # Запустите контейнер Docker:
 docker run <image_name>

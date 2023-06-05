@@ -1,18 +1,8 @@
-dict = {
-    1: ["I", 1],
-    2: ["IV", 4],
-    3: ["V", 5],
-    4: ["IX", 9],
-    5: ["X", 10],
-    6: ["XL", 40],
-    7: ["XC", 90],
-    8: ["C", 100],
-    9: ["CD", 400],
-    10: ["D", 500],
-    11: ["CM", 900],
-    12: ["M", 1000],
-}
-i = 12
+class Sakinys:
+    def text_atbulai(self, txt):
+        self.txt = txt[::-1]
+        return self.txt
 
 
-print(3000 // dict[i][1])
+sakinys = Sakinys()
+print(sakinys.text_atbulai("abrakadabra"))
