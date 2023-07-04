@@ -31,7 +31,7 @@
 # python -m venv .venv
 
 # Aktyvuoti virt. aplinka:
-# source .venv/Scripts/actvate
+# source .venv/Scripts/activate
 
 # Kad istaliuoti paketus/bibliotekas:
 # pip install <paketo pavadinimas>

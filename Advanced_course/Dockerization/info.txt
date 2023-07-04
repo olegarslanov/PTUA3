@@ -1,0 +1,40 @@
+Dockerfile sukurimo algoritmas:
+1. Sukuriam du folderius: "docker" ir "src"
+
+2. "src" folderyje bus vieta musu programai
+
+3. einu i "docker" folderi. 
+
+4. Tada terminale rasau: code Dockerfile
+
+5. turi issokti langas install Docker extension desineje apatiniame kampe ... spaudziam install
+
+6. tada faile "Dockerfile" irasau:
+    FROM python:3.9                        # cia nurodom kokia programa bus naudojama
+    WORKDIR /app                           # nurodau darbine direktorija
+    COPY requirements.txt .               # kode .(taskas) reiskia, kad nurodau pagrindine/work direktorija, kurioje dirsiu dabar. Siuo atveju /app
+    RUN pip install -r requirements.txt    # naudojama, kad instaliuoti visas priklausomybes, murodytas requirements.txt faile
+    COPY src/ .                            # viskas kas yra 'src' direktorijoje nukopinu i 'app' direktorija
+    CMD python main.py                     # nuorodau pagrindini procesa, kuris bus vykdomas paleidziant konteineri
+
+7. Pasileidziu docker konteineri:
+    reikia pasileisti "docker desktop" aplikacija 
+    pasileidziu terminalo applikacija (pvz. PowerShell, arba vscode)
+    einu i direktorija Dockerization (* reikia visada leisti komandas is auksciausio tasko)
+    tada irasau: docker build -f docker/Dockerfile -t testing_dockerfile .       # komanda 'docker build' naudoja 'Dockerfile'ir suteikia jam pavadinima "testing_dockerfile"
+    tikrinu kas sukurta, rasau: docker images
+    viskas image sukurtas 
+
+8. Galiu paleisti programa: docker run -it testing_dockerfile
+
+9. Galima update dockerfile:
+    pataisau savo failus "src" direktorijoje
+    tada irasauvle: docker build -f docker/Dockerfile -t testing_dockerfile .       # komanda 'docker build' naudoja 'Dockerfile'ir suteikia jam pavadinima "testing_dockerfile"
+    tikrinu kas sukurta, rasau: docker images
+ 
+ 
+    
+Pastabos:   
+* cia sukuriame savo programa kuria galesime paleisti bet kokiame kompe (buna ir jau gatavu programu is interneto)
+* cia jei kopinu direktorija, tai failai ateina su direktorija
+* docker system prune -a    isvalo kompa nuo visu docker image ir t.t.
